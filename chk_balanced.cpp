@@ -4,7 +4,7 @@
 
 int main(){
     char carray[101];
-    int counter = 100, counter_from_begin = 0, temp;
+    int counter = 100, counter_from_begin = 0;
     bool counter_loop = true, except_cirrumstance = true;
     std::cout << "Please enter character(s) followed by an enter: ";
     std::cin >> carray;
@@ -19,10 +19,8 @@ int main(){
 
     std::cout << "You have entered " << counter+1 << " characters." << "\n";
     std::cout << "The program needs to check its balance for " << ceil((counter+1)/2.0) << " times.\n"; //The decimal (.0) for 2.0 is VERY IMPORTANT, floating is needed in order to get the correct value.
-    temp = ceil((counter+1)/2.0);
-    std::cout << "temp val: " << temp << "\n";
 
-    for(int i = temp; i>=0; i--){
+    for(int i = ceil((counter+1)/2.0); i>=0; i--){
         while(except_cirrumstance){
             std::cout << "Start checking...\n";
             if(counter_from_begin==counter){
