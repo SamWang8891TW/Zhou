@@ -31,7 +31,7 @@ int main(){
     }
 
     for(int i = 0; i<8; i++){ // check Special character
-        if((int)pass[i] >= 49 && (int)pass[i] <= 97){
+        if(((int)pass[i] >= 49 && (int)pass[i] <= 57) || ((int)pass[i] >= 65 && (int)pass[i] <= 90) || ((int)pass[i] >= 97 && (int)pass[i] <= 122)){
             //Yeah it's empty, don't suspect it.
         }
         else
